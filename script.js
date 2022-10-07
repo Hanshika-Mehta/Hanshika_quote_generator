@@ -1,7 +1,7 @@
-var quotes = document.getElementById("new_quote").value;
+var quotes = document.getElementById("new_quote");
         const author = document.getElementById("author");
         const newQ = document.getElementById("newQ");
-        const tweerMe = document.getElementById("tweerMe");
+        const tweetMe = document.getElementById("tweerMe");
         let realData = "";
         let quotesData = "";
         
@@ -23,6 +23,7 @@ var quotes = document.getElementById("new_quote").value;
                     console.log(String(realData[rnum].text));
                     console.log(quotes);
                     quotes = String(realData[rnum].text);
+                    document.getElementById("quotes").innerHTML= quotes;
                     
                 } catch (error) {console.log(error); }
             };    
